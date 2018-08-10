@@ -13,7 +13,7 @@ def main():
     site = 'https://www.intersection.ventures'
     page = requests.get(site)
     bsObj = BeautifulSoup(page.text.encode('ISO-8859-1'), "html.parser")
-    conn = sqlite3.connect('/Users/vitor/Desenvolvimento/docker/TutorMatch/tutormatch.sqlite')
+    conn = sqlite3.connect('./tutormatch_back/tutormatch.sqlite')
     c = conn.cursor()
 
     apps = bsObj.findAll("div", {"class", "people"})

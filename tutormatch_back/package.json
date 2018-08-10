@@ -1,7 +1,7 @@
 {
   "name": "tutormatch",
   "version": "1.0.0",
-  "description": "INTERSECTION Coding​ Challenge",
+  "description": "Tutor Match",
   "main": "index.js",
   "scripts": {
     "start": "npm run clusters",
