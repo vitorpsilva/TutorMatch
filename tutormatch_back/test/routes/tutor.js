@@ -1,43 +1,43 @@
-/* describe("Routes: Tasks", () => {
-    const User = app.db.models.Users;
-    const Task = app.db.models.Tasks;
+/* describe("Routes: Tutors", () => {
+    const Student = app.db.models.Students;
+    const Tutor = app.db.models.Tutors;
 
-    describe("GET /tasks", () => {
+    describe("GET /Tutors", () => {
         describe("status 200", () => {
-            it("returns a list of tasks", done => {
+            it("returns a list of Tutors", done => {
                 // Código de testes
             });
         });
     });
-    describe("POST /tasks/", () => {
+    describe("POST /Tutors/", () => {
         describe("status 200", () => {
-            it("creates a new task", done => {
+            it("creates a new Tutor", done => {
                 // Código de testes
             });
         });
     });
-    describe("GET /tasks/:id", () => {
+    describe("GET /Tutors/:id", () => {
         describe("status 200", () => {
-            it("returns one task", done => {
+            it("returns one Tutor", done => {
                 // Código de testes
             });
         });
         describe("status 404", () => {
-            it("throws error when task not exist", done => {
+            it("throws error when Tutor not exist", done => {
                 // Código de testes
             });
         });
     });
-    describe("PUT /tasks/:id", () => {
+    describe("PUT /Tutors/:id", () => {
         describe("status 204", () => {
-            it("updates a task", done => {
+            it("updates a Tutor", done => {
                 // Código de testes
             });
         });
     });
-    describe("DELETE /tasks/:id", () => {
+    describe("DELETE /Tutors/:id", () => {
         describe("status 204", () => {
-            it("removes a task", done => {
+            it("removes a Tutor", done => {
                 // Código de testes
             });
         });
