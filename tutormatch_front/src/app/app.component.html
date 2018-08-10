@@ -1,0 +1,51 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="py-5 text-center">
+    <h2>Tutor Match</h2>
+    <p class="lead">Below you can find and add the better Tutor(s) to your necessity. Enjoy!</p>
+  </div>
+  <!-- START STUDENT -->
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+          <app-student-tutors></app-student-tutors>
+        </div>
+        <div class="col-md-8 order-md-1">
+          <app-student-create></app-student-create>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FINISH TUTOR LIST -->
+  <br>
+  <hr>
+  <br>
+  <!-- START TUTOR LIST-->
+  <div class="col-md-12">
+    <app-tutor-list></app-tutor-list>
+  </div>
+  <!-- FINISH TUTOR LIST-->
+  <br>
+  <hr>
+  <br>
+  <!-- START TUTOR LIST-->
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12 order-md-2 mb-4">
+          <app-tutor-create></app-tutor-create>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FINISH TUTOR LIST-->
+
+  <!-- START FOOTER -->
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2018 Code Chalenge</p>
+  </footer>
+  <!-- FINISH FOOTER -->
+</div>
+
+<router-outlet></router-outlet>
