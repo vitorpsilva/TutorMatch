@@ -66,7 +66,7 @@ tutormatch_back/tutormatch.sqlite
 tutormatch_back/logs/
 tutormatch_back/.vscode
 tutormatch_front/node_modules
-
+tutormatch_front/package-lock.json
 # compiled output
 /dist
 /tmp
