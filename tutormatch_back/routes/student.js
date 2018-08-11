@@ -89,15 +89,50 @@ module.exports = app => {
 
     app.put("/student", (req, res) => {
         Student.update(req.body, {
-                where: {
-                    id: req.body.id
-                },
-                attributes: ["id", "name", "email"],
-            }).then(() => {
-                res.status(200).json({
-                    msg: "Updated Successfully -> Student Id: " + req.body.id
-                });
-            }).catch(error => {
+            where: {
+                id: req.body.id
+            },
+            attributes: ["id", "name", "email"],
+        }).then(() => {
+            res.status(200).json({
+                msg: "Updated Successfully -> Student Id: " + req.body.id
+            });
+        }).catch(error => {
+            res.status(412).json({
+                msg: error.message
+            });
+        });
+    });
+
+    app.post("/student/tutor", (req, res) => {
+        Student.findById(req.body.id, {
+                include: [{
+                    model: app.db.models.Tutor,
+                    as: 'tutors',
+                    required: false,
+                    attributes: ["id", "name", "contact", "picture", "title"],
+                    through: {
+                        attributes: []
+                    }
+                }],
+                attributes: ["id", "name", "email"]
+
+            })
+            .then(result => {
+
+                Tutor.findById(req.body.tutors[0].id)
+                    .then(result2 => {
+
+                        result.addTutor(result2, {
+                            status: 'started'
+                        })
+
+                    })
+
+                res.status(201)
+                res.json(result);
+            })
+            .catch(error => {
                 res.status(412).json({
                     msg: error.message
                 });
