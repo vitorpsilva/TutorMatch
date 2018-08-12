@@ -1,7 +1,7 @@
 import { Tutor } from './tutor';
 
 export class Student {
-    id?: string;
+    id?: number;
     name?: string;
     email?: string;
     tutors: Tutor[];

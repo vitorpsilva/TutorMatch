@@ -3,6 +3,7 @@ import { TutorService } from '../tutor.service';
 import { Tutor } from '../models/tutor';
 
 
+
 @Component({
   selector: 'app-tutor-create',
   templateUrl: './tutor-create.component.html',
@@ -14,7 +15,8 @@ export class TutorCreateComponent implements OnInit {
 
   tutor: Tutor;
 
-  constructor(private tutorService: TutorService) { }
+  constructor(
+    private tutorService: TutorService) { }
 
   add(tutor: Tutor): void {
     console.log(this.tutor);
@@ -24,6 +26,7 @@ export class TutorCreateComponent implements OnInit {
         this.tutor = newTutor;
         console.log(this.tutor);
       });
+      this.tutors.push();
   }
 
   ngOnInit() {

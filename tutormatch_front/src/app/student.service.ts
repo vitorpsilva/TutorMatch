@@ -50,10 +50,10 @@ export class StudentService {
 
   /** GET tutor by id. Will 404 if id not found */
   getStudent(id: number): Observable<Student> {
-    const url = `${this.url}/${id}`;
+    const url = `${this.url}/student/${id}`;
     return this.http.get<Student>(url).pipe(
       tap(_ => this.log(`fetched tutor id=${id}`)),
-      catchError(this.handleError<Student>(`getTutor id=${id}`))
+      catchError(this.handleError<Student>(`getStudent id=${id}`))
     );
   }
 
@@ -65,6 +65,20 @@ export class StudentService {
     return this.http.post(`${this.url}/student`, tutor, httpOptions).pipe(
       tap((student: Student) => this.log(`added student w/ id=${student.id}`)),
       catchError(this.handleError<Student>('addStudent'))
+    );
+  }
+
+  addTutorToStudent(studentId: number, tutorId: number): Observable<Student> {
+    return this.http.post(`${this.url}/student/tutor?studentId=${studentId}&tutorId=${tutorId}`, httpOptions).pipe(
+      tap(_ => this.log(`added relantinship`)),
+      catchError(this.handleError<any>('addTutorToStudent'))
+    );
+  }
+
+  removeTutorToStudent(studentId: number, tutorId: number): Observable<Student> {
+    return this.http.put(`${this.url}/student/tutor?studentId=${studentId}&tutorId=${tutorId}`, httpOptions).pipe(
+      tap(_ => this.log(`added relantinship`)),
+      catchError(this.handleError<any>('addTutorToStudent'))
     );
   }
 

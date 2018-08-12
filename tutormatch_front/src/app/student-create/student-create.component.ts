@@ -10,7 +10,8 @@ import { StudentService } from '../student.service';
 export class StudentCreateComponent implements OnInit {
 
   student: Student;
-  student_id: string;
+  students: Student[] = [];
+
 
   constructor(private studentService: StudentService) { }
 
@@ -20,14 +21,19 @@ export class StudentCreateComponent implements OnInit {
     this.studentService.addStudent(this.student)
       .subscribe(newStudent => {
         this.student = newStudent;
-        this.student_id = this.student.id;
-        console.log(newStudent);
-        console.log(this.student_id);
+        this.students.push(this.student);
       });
+  }
+
+  listAllStudents(): void {
+    this.studentService.getStudents().subscribe(result => {
+      this.students = result;
+    });
   }
 
   ngOnInit() {
     this.student = new Student();
+    this.listAllStudents();
   }
 
 }

@@ -75,7 +75,7 @@ export class TutorService {
   addTutor(tutor: Tutor): Observable<Tutor> {
     console.log(tutor);
     return this.http.post(`${this.url}/tutor`, tutor, httpOptions).pipe(
-      tap((tutor: Tutor) => this.log(`added tutor w/ id=${tutor.id}`)),
+      tap((tutor2: Tutor) => this.log(`added tutor w/ id=${tutor2.id}`)),
       catchError(this.handleError<Tutor>('addTutor'))
     );
   }
@@ -83,7 +83,7 @@ export class TutorService {
   /** DELETE: delete the tutor from the server */
   deleteTutor(tutor: Tutor | number): Observable<Tutor> {
     const id = typeof tutor === 'number' ? tutor : tutor.id;
-    const url = `${this.url}/${id}`;
+    const url = `${this.url}/tutor/${id}`;
 
     return this.http.delete<Tutor>(url, httpOptions).pipe(
       tap(_ => this.log(`deleted tutor id=${id}`)),
