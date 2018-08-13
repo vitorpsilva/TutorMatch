@@ -21,7 +21,8 @@ export class StudentCreateComponent implements OnInit {
     this.studentService.addStudent(this.student)
       .subscribe(newStudent => {
         this.student = newStudent;
-        this.students.push(this.student);
+        this.student = new Student();
+        this.listAllStudents();
       });
   }
 

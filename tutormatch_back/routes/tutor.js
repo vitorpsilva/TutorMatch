@@ -1,15 +1,15 @@
 module.exports = app => {
-    
+
     const Tutor = app.db.models.Tutor;
 
     app.route("/tutor")
         .get((req, res) => {
             // "/tutor": List all Tutors
             Tutor.findAll({
-                through: {
-                    attributes: []
-                }
-            })
+                    through: {
+                        attributes: []
+                    }
+                })
                 .then(result => res.json(result))
                 .catch(error => {
                     res.status(412).json({
@@ -51,7 +51,7 @@ module.exports = app => {
             Tutor.update(req.body, {
                     where: req.params
                 })
-                .then(result => res.sendStatus(204))
+                .then(result => res.status(204))
                 .catch(error => {
                     res.status(412).json({
                         msg: error.message
@@ -63,7 +63,9 @@ module.exports = app => {
             Tutor.destroy({
                     where: req.params
                 })
-                .then(result => res.sendStatus(204))
+                .then(result => res.status(200).json({
+                    msg: 'Success on transaction. Register Deleted'
+                }))
                 .catch(error => {
                     res.status(412).json({
                         msg: error.message
