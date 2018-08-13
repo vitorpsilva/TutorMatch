@@ -4,7 +4,7 @@ Tutor Match a simple project using NodeJS, OAS 3.0, Swagger, Angular 6.0, SQLite
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
@@ -25,51 +25,40 @@ Say what the step will be
 
 ```
 Give the example
-git clone https://github.com/vitorpsilva/TutorMatch.git
 
-And repeat
+...
+$ git clone https://github.com/vitorpsilva/TutorMatch.git
+...
 
 ## Running with Angular CLI
-cd TutorMatch/tutormatch_front
-npm install
-ng serve
+
+...
+$ cd TutorMatch/tutormatch_front
+$ npm install
+$ ng serve
+...
 
 ## Running NodeJS
-cd TutorMatch/tutormatch_back
-npm install
-nodemon --exec npm start 
-OR
-npm start
 
-End with an example of getting some data out of the system or using it for a little demo
+...
+$ cd TutorMatch/tutormatch_back
+$ npm install
+$ nodemon --exec npm start 
+OR
+$ npm start
+...
 
 ## Running with Docker Compose
 
+...
 $ docker-compose up
+...
 
-## Running the Docker
+## Using the app
 
-$ docker-compose up
+* [Frontend](http://localhost:8080) - Tutor Match Frontend - http://localhost:8080
+* [Backend](http://localhost:3000) - API Catalog - http://localhost:3000
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
@@ -85,7 +74,7 @@ Please, see the [tags on this repository](https://github.com/vitorpsilva/TutorMa
 
 * **Antonio Vitor** - *Demo* - [vitorpsilva](https://github.com/vitorpsilva)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/vitorpsilva/TutorMatch/contributors) who participated in this project.
 
 ## License
 
