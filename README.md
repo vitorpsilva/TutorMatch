@@ -16,6 +16,7 @@ Node: 8.11.3
 npm: 5.6.0
 Nodemon: 1.18.3
 
+```
 
 ### Installing
 
@@ -28,6 +29,7 @@ Give the example
 ```
 $ git clone https://github.com/vitorpsilva/TutorMatch.git
 
+```
 
 ## Running with Angular CLI
 
@@ -36,6 +38,7 @@ $ cd TutorMatch/tutormatch_front
 $ npm install
 $ ng serve
 
+```
 
 ## Running NodeJS
 
@@ -46,12 +49,14 @@ $ nodemon --exec npm start
 OR
 $ npm start
 
+```
 
 ## Running with Docker Compose
 
 ```
 $ docker-compose up
 
+```
 
 ## Using the app
 
