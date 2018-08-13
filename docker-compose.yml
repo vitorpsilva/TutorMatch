@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: ./tutormatch_front
+    ports:
+     - "8080:80"
+  server:
+    build: ./tutormatch_back
+    ports:
+     - "3000:3000"
