@@ -15,16 +15,13 @@ Angular CLI: 6.0.8
 Node: 8.11.3
 npm: 5.6.0
 Nodemon: 1.18.3
+Docker: 18.06.0
 
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-Give the example
+If you use Docker, you just need exec **$ docker-compose up** to use this project.
 
 ```
 $ git clone https://github.com/vitorpsilva/TutorMatch.git
@@ -45,15 +42,14 @@ $ ng serve
 ```
 $ cd TutorMatch/tutormatch_back
 $ npm install
-$ nodemon --exec npm start 
-OR
-$ npm start
+$ nodemon --exec npm start OR $ npm start
 
 ```
 
 ## Running with Docker Compose
 
 ```
+cd TutorMatch/
 $ docker-compose up
 
 ```
@@ -76,7 +72,7 @@ Please, see the [tags on this repository](https://github.com/vitorpsilva/TutorMa
 
 ## Authors
 
-* **Antonio Vitor** - *Demo* - [vitorpsilva](https://github.com/vitorpsilva)
+* **Antonio Vitor** - [vitorpsilva](https://github.com/vitorpsilva)
 
 See also the list of [contributors](https://github.com/vitorpsilva/TutorMatch/contributors) who participated in this project.
 
